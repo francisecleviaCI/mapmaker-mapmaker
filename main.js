@@ -86,9 +86,7 @@ const better = nums[i];
 } else {
   results.push(better * 1)
 }
- 
 }
-
 
 return results;
 }
@@ -104,7 +102,10 @@ console.log(doubleOdd([-1, -4, 32.5, 4]))
 const add1ToLeft = function(nums) {
   const results = []
   for(let i = 0; i <nums.length; i++){
-  results.push('1' + nums[i])
+  const better = nums[i];
+  const digit = '1';
+  if (better % 2 === 0)
+  results.push(digit.concat(better))
   
   }
   return results;
